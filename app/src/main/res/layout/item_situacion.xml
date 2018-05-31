@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:id="@+id/tarjetas"
+    card_view:cardElevation="4dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardUseCompatPadding="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/situacion"
+                />
+
+            <TextView
+                android:id="@+id/txtMunicipio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="afdas:"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="10dp"
+            >
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Departamento:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Anio:"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="Mes:"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo de desminado:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tolta de minas:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="420dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="20dp"
+            >
+            <TextView
+                android:id="@+id/tvDeparamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="afdas:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/txtanio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="afdas:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvmes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="afdas:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTipoDesminado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="afdas:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="afdas:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvOrganizacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="afdas:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+

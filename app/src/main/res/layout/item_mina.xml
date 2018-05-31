@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="270dp"
+    android:id="@+id/tarjetas"
+    card_view:cardElevation="4dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardUseCompatPadding="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="#4163c9"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/mapa"
+                />
+
+            <TextView
+                android:id="@+id/txtDepartamentoR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="afdas:"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+    <LinearLayout
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="10dp"
+        >
+
+        <TextView
+            android:id="@+id/txtanio"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Año:"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/txtMunicipio"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Municipio:"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/txtSitio"
+            android:layout_width="100dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Sitio:"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtTipoArea"
+            android:layout_width="100dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Tipo Área:"
+            />
+
+        <TextView
+            android:id="@+id/txtEstado"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Estado:"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="localización"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="420dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="20dp"
+            >
+            <TextView
+                android:id="@+id/txtAnioR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="afdas:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/txtMunicipioR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="afdas:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/txtSitioR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="afdas:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/txtTipoAreaR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="afdas:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/txtEstadoR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="afdas:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+            <ImageButton
+                android:id="@+id/ibMapa"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/localizacion"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
