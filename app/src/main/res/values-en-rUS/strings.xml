@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MinasApi</string>
+    <string name="visualizar">Visualize Mines</string>
+    <string name="situacionMinas">Mine situation</string>
+    <string name="acercaDe">About</string>
+    <string name="anio">Year</string>
+    <string name="municipio">District</string>
+    <string name="sitio">Site</string>
+    <string name="tipoArea">Type Area</string>
+    <string name="estado">Situation</string>
+    <string name="localizacion">Location</string>
+    <string name="departamento">Department</string>
+    <string name="mes">Month</string>
+    <string name="totalMinas">Total of mines</string>
+    <string name="tipo">demining type</string>
+    <string name="organizacion">Organization</string>
+    <string name="inicio">Home</string>
+</resources>

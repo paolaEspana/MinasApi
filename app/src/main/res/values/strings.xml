@@ -9,4 +9,19 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_main_drawer">MainDrawer</string>
+    <string name="visualizar">Visualizar Minas</string>
+    <string name="situacionMinas">Situacion de minas</string>
+    <string name="acercaDe">Acerca De</string>
+    <string name="anio">Año</string>
+    <string name="municipio">Municipio</string>
+    <string name="sitio">Sitio</string>
+    <string name="tipoArea">Tipo Area</string>
+    <string name="estado">Estado</string>
+    <string name="localizacion">Localización</string>
+    <string name="departamento">Departamento</string>
+    <string name="mes">Mes</string>
+    <string name="totalMinas">Total Minas</string>
+    <string name="tipo">Tipo Desminado</string>
+    <string name="organizacion">Organización</string>
+    <string name="inicio">Inicio</string>
 </resources>

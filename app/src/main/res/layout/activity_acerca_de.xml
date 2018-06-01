@@ -6,4 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".AcercaDe">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logof"
+        android:layout_marginTop="40dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Paola Andrea Labrada España"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        />
+</LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

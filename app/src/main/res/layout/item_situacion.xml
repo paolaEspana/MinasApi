@@ -12,9 +12,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#ffffff"
+        android:background="#39d999"
+
         >
 
         <LinearLayout
@@ -37,6 +38,7 @@
                 android:textSize="30dp"
                 android:textStyle="bold"
                 android:textAlignment="center"
+                android:textColor="#ffffff"
                 />
 
         </LinearLayout>
@@ -46,6 +48,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         android:orientation="horizontal"
         >
 
@@ -58,52 +61,68 @@
             >
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Departamento:"
+                android:text="@string/departamento"
                 android:textSize="20dp"
                 android:textStyle="bold"
+                android:textColor="#39d999"
                 />
 
             <TextView
                 android:layout_width="100dp"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                android:text="Anio:"
-                android:layout_height="wrap_content" />
+                android:text="@string/anio"
+                android:layout_height="wrap_content"
+                android:textColor="#39d999"
+                />
 
             <TextView
                 android:layout_width="100dp"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:layout_height="wrap_content"
-                android:text="Mes:"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Tipo de desminado:"
-                android:textSize="20dp"
-                android:textStyle="bold"
+                android:text="@string/mes"
+                android:textColor="#39d999"
                 />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tolta de minas:"
+                android:text="@string/tipo"
                 android:textSize="20dp"
                 android:textStyle="bold"
+                android:textColor="#39d999"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/totalMinas"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#39d999"
+                />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/organizacion"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#39d999"
                 />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="420dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginTop="70dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             >
             <TextView
                 android:id="@+id/tvDeparamento"

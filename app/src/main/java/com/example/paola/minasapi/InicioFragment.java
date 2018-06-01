@@ -40,8 +40,7 @@ public class InicioFragment extends Fragment{
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.activity_inicio_fragment, container, false);
         visualizar = (CardView) view.findViewById(R.id.cvVisualizar);
-        zona = (CardView) view.findViewById(R.id.cvZona);
-        acercaDe = (CardView) view.findViewById(R.id.acercaDe);
+        acercaDe = (CardView) view.findViewById(R.id.cvAcercaDe);
         situacion = (CardView) view.findViewById(R.id.cvSituacion);
 
         visualizar.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +72,13 @@ public class InicioFragment extends Fragment{
                 }
                 FragmentManager fragmentManager=myContext.getSupportFragmentManager();
                 fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+            }
+        });
+        acercaDe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(myContext.getApplicationContext(), AcercaDe.class);
+                startActivity(intent);
             }
         });
         return view;

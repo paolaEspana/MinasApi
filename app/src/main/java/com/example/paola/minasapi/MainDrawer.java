@@ -1,5 +1,6 @@
 package com.example.paola.minasapi;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,6 +15,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.paola.minasapi.situacion.SituacionActivity;
 
 public class MainDrawer extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -108,6 +111,19 @@ public class MainDrawer extends AppCompatActivity implements NavigationView.OnNa
 
         if (id == R.id.inicio) {
             fragmentClass = InicioFragment.class;
+        }
+        else if(id == R.id.visualizar)
+        {
+            fragmentClass = MainActivity.class;
+        }
+        else if(id == R.id.situacion)
+        {
+            fragmentClass = SituacionActivity.class;
+        }
+        else if(id==R.id.acercaDe)
+        {
+            Intent intent = new Intent(getApplicationContext(), AcercaDe.class);
+            startActivity(intent);
         }
 
         try{

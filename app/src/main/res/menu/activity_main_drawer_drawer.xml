@@ -7,27 +7,23 @@
         <item
             android:id="@+id/inicio"
             android:icon="@drawable/casa"
-            android:title="Inicio" />
+            android:title="@string/inicio" />
         <item
             android:id="@+id/visualizar"
             android:icon="@drawable/mapai"
-            android:title="Visualizar Minas" />
-
-
-            <item
-                android:id="@+id/grafica"
-                android:icon="@drawable/graficai"
-                android:title="Grafica de minas" />
-
+            android:title="@string/visualizar" />
+        <item
+            android:id="@+id/situacion"
+            android:icon="@drawable/mapai"
+            android:title="@string/situacionMinas" />
     </group>
 
-    <item android:title="Información">
+    <item android:title="@string/acercaDe">
         <menu>
             <item
                 android:id="@+id/acercaDe"
                 android:icon="@drawable/informacion"
-                android:title="Acerca De" />
+                android:title="@string/about" />
         </menu>
     </item>
-
 </menu>
