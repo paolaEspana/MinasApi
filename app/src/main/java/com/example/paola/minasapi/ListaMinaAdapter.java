@@ -13,76 +13,22 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+
 import com.bumptech.glide.Glide;
 import com.example.paola.minasapi.api.Mina;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class ListaMinaAdapter  extends RecyclerView.Adapter<ListaMinaAdapter.ViewHolder>
+public class ListaMinaAdapter extends RecyclerView.Adapter <ListaMinaAdapter.AdapterViewHolder>
 {
-    private ArrayList<Mina> dataset;
-    private Context context;
-    private Mina mina;
-    private ArrayList minas;
-    private Integer postition1;
+    private List<Mina> items;
 
-    public ListaMinaAdapter(Context context)
-    {
-        this.context = context;
-        dataset = new ArrayList<>();
-    }
+    public static class AdapterViewHolder extends RecyclerView.ViewHolder{
 
-    @NonNull
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
-    {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_mina, parent, false);
-        return new ViewHolder(view);
-    }
-
-    @SuppressLint("LongLogTag")
-    @Override
-    public void onBindViewHolder(@NonNull final ListaMinaAdapter.ViewHolder holder, final int position)
-    {
-        mina = dataset.get(position);
-        Log.i("Posicionnnnnnnnnnnnnnnnnnnnnnn", ""+position);
-        holder.anio.setText(mina.getAno());
-        holder.departamento.setText(mina.getDepartamento());
-        holder.municipio.setText(mina.getMunicipio());
-        holder.sitio.setText(mina.getSitio());
-        holder.tipoArea.setText(mina.getTipoarea());
-        holder.estado.setText(mina.getTipoevento());
-
-        holder.tarjetas.setOnClickListener(new View.OnClickListener()
-        {
-            @SuppressLint("LongLogTag")
-            @Override
-            public void onClick(View v)
-            {
-                lanzarMapa(Double.valueOf(mina.getLongitudcabecera()),Double.valueOf(mina.getLatitudcabecera()),mina.getMunicipio());
-            }
-        });
-
-        //holder.tarjetas.setOnClickListener(this);
-
-        Glide.with(context);
-    }
-
-    @Override
-    public int getItemCount()
-    {
-        return dataset.size();
-    }
-
-    public void adicionarMina(ArrayList<Mina> listaMina)
-    {
-        dataset.addAll(listaMina);
-        notifyDataSetChanged();
-    }
-
-    public class ViewHolder extends RecyclerView.ViewHolder
-    {
-        private CardView tarjetas;
+        public View v;
+        public Context c;
         private TextView anio;
         private TextView departamento;
         private TextView municipio;
@@ -90,11 +36,11 @@ public class ListaMinaAdapter  extends RecyclerView.Adapter<ListaMinaAdapter.Vie
         private TextView tipoArea;
         private TextView estado;
         private ImageButton mapa;
+        private CardView tarjetas;
 
-        public ViewHolder(View itemView)
-        {
-            super(itemView);
-
+        public AdapterViewHolder(View v){
+            super(v);
+            c = v.getContext();
             tarjetas = (CardView) itemView.findViewById(R.id.tarjetas);
             anio = (TextView) itemView.findViewById(R.id.txtAnioR);
             departamento = (TextView) itemView.findViewById(R.id.txtDepartamentoR);
@@ -103,16 +49,54 @@ public class ListaMinaAdapter  extends RecyclerView.Adapter<ListaMinaAdapter.Vie
             tipoArea = (TextView) itemView.findViewById(R.id.txtTipoAreaR);
             estado = (TextView) itemView.findViewById(R.id.txtEstadoR);
             mapa = (ImageButton) itemView.findViewById(R.id.ibMapa);
+            this.v = v;
         }
+    }
+
+    public ListaMinaAdapter(List<Mina> items)
+    {
+        this.items=items;
+    }
+    @NonNull
+    @Override
+    public AdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_mina,parent,false);
+        return new AdapterViewHolder(v);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull final AdapterViewHolder holder, final int position)
+    {
+        holder.anio.setText(items.get(position).getAno());
+        holder.departamento.setText(items.get(position).getDepartamento());
+        holder.municipio.setText(items.get(position).getMunicipio());
+        holder.sitio.setText(items.get(position).getSitio());
+        holder.tipoArea.setText(items.get(position).getTipoarea());
+        holder.estado.setText(items.get(position).getTipoevento());
+        holder.mapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(holder.c, MapsActivity.class);
+                intent.putExtra("longitud", Double.valueOf(items.get(position).getLongitudcabecera()));
+                intent.putExtra("latitud", Double.valueOf(items.get(position).getLatitudcabecera()));
+                intent.putExtra("ubicacion", items.get(position).getMunicipio());
+
+                holder.c.startActivity(intent);
+            }
+        });
+    }
+
+    @Override
+    public int getItemCount() {
+        return items.size();
     }
 
     public void lanzarMapa(Double longitud, Double latitud, String municipio)
     {
-        Intent intent = new Intent(context, MapsActivity.class);
-        intent.putExtra("longitud", longitud);
-        intent.putExtra("latitud", latitud);
-        intent.putExtra("ubicacion", municipio);
-        Log.i("seeeeeeeeeeeeh",longitud + " " +latitud +" " +municipio);
-        context.startActivity(intent);
+
     }
+
+
+
 }

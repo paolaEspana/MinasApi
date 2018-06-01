@@ -45,7 +45,7 @@
             android:name=".MainDrawer"
             android:label="@string/title_activity_main_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
-
+        <activity android:name=".AcercaDe"></activity>
     </application>
 
 </manifest>

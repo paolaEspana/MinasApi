@@ -24,7 +24,8 @@ public class InicioFragment extends Fragment{
     private CardView visualizar,zona,acercaDe,situacion;
 
     @Override
-    public void onAttach(Activity activity) {
+    public void onAttach(Activity activity)
+    {
         myContext = (FragmentActivity) activity;
 
         super.onAttach(activity);

@@ -30,6 +30,23 @@ public class Mina
 
     private UbicaciN ubicaciN;
 
+
+    public Mina(String ano, String codigodanedepartamento, String codigodanemunicipio, String departamento, String evento, String latitudcabecera, String longitudcabecera, String mes, String municipio, String sitio, String tipoarea, String tipoevento, String tipolugar) {
+        this.ano = ano;
+        this.codigodanedepartamento = codigodanedepartamento;
+        this.codigodanemunicipio = codigodanemunicipio;
+        this.departamento = departamento;
+        this.evento = evento;
+        this.latitudcabecera = latitudcabecera;
+        this.longitudcabecera = longitudcabecera;
+        this.mes = mes;
+        this.municipio = municipio;
+        this.sitio = sitio;
+        this.tipoarea = tipoarea;
+        this.tipoevento = tipoevento;
+        this.tipolugar = tipolugar;
+    }
+
     public String getAno() {
         return ano;
     }
